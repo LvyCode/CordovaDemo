@@ -1,0 +1,98 @@
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf8">
+            <script type="text/javascript" src="cordova.js"></script>
+            <script language="javascript">
+            function scanClick() {
+                cordova.exec(null,null,"helloworld_plug","scan",[]);
+            }
+
+            function shareClick() {
+            cordova.exec(null,null,"TestPlugin","share",['测试分享的标题','测试分享的内容','http://m.rblcmall.com/share/openShare.htm?share_uuid=shdfxdfdsfsdfs&share_url=http://m.rblcmall.com/store_index_32787.htm&imagePath=http://c.hiphotos.baidu.com/image/pic/item/f3d3572c11dfa9ec78e256df60d0f703908fc12e.jpg']);
+            }
+
+            function locationClick() {
+                cordova.exec(setLocation,locationError,"TestPlugin","location",[]);
+            }
+
+            function locationError(error) {
+                asyncAlert(error);
+                document.getElementById("returnValue").value = error;
+            }
+
+            function setLocation(location) {
+                asyncAlert(location);
+                document.getElementById("returnValue").value = location;
+            }
+            
+            function getQRCode(result) {
+                asyncAlert(result);
+                document.getElementById("returnValue").value = result;
+            }
+            
+            function colorClick() {
+                cordova.exec(null,null,"TestPlugin","changeColor",[67,205,128,0.5]);
+            }
+            
+            function payClick() {
+                cordova.exec(null,null,"TestPlugin","pay",['201511120981234','wx',1,'粉色外套']);
+            }
+            
+            function payResult(str,code) {
+                asyncAlert(str + ' , ' + code);
+                document.getElementById("returnValue").value = str;
+            }
+            
+            function shareResult(channel_id,share_channel,share_url) {
+                var content = channel_id+","+share_channel+","+share_url;
+                asyncAlert(content);
+                document.getElementById("returnValue").value = content;
+            }
+
+
+             function testFunction() {
+    
+    cordova.exec(testSuccess,testFailed,"TestPlugin","testController",['类型','wx',1,'粉色外套']);
+    
+}
+            
+            function testSuccess(msg) {
+                alert(msg);
+            }
+            
+            function testFailed(msg) {
+                alert('failed: ' + msg);
+            }
+            
+
+            function asyncAlert(content) {
+                setTimeout(function(){
+                           alert(content);
+                           },1);
+            }
+        
+            
+            </script>
+            </head>
+    
+    <body>
+        <h1>这是按钮调用</h1>
+        <input type="button" value="扫一扫" onclick="scanClick()" />
+        <input type="button" value="获取定位" onclick="locationClick()" />
+        <input type="button" value="修改背景色" onclick="colorClick()" />
+        <input type="button" value="分享" onclick="shareClick()" />
+        <input type="button" value="支付" onclick="payClick()" />
+        <input type="button" value="testController" onclick="testFunction()" />
+      
+        <h1>这是文件上传</h1>
+
+        <input type="file" />
+        
+        <h1>这是回调结果展示区</h1>
+        <textarea id ="returnValue" type="value" rows="5" cols="40">
+        
+        </textarea>
+        
+        
+    </body>
+</html>

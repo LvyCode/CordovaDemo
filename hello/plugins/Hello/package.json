@@ -1,0 +1,57 @@
+{
+  "_args": [
+    [
+      {
+        "raw": "/Users/lyy/Desktop/Cordova项目/hello/plugins/helloworld_plug",
+        "scope": null,
+        "escapedName": null,
+        "name": null,
+        "rawSpec": "/Users/lyy/Desktop/Cordova项目/hello/plugins/helloworld_plug",
+        "spec": "/Users/lyy/Desktop/Cordova项目/hello/plugins/helloworld_plug",
+        "type": "directory"
+      },
+      "/Users/lyy/Desktop/Cordova项目/hello"
+    ]
+  ],
+  "_from": "plugins/helloworld_plug",
+  "_id": "Hello@1.0.0",
+  "_inCache": true,
+  "_location": "/Hello",
+  "_phantomChildren": {},
+  "_requested": {
+    "raw": "/Users/lyy/Desktop/Cordova项目/hello/plugins/helloworld_plug",
+    "scope": null,
+    "escapedName": null,
+    "name": null,
+    "rawSpec": "/Users/lyy/Desktop/Cordova项目/hello/plugins/helloworld_plug",
+    "spec": "/Users/lyy/Desktop/Cordova项目/hello/plugins/helloworld_plug",
+    "type": "directory"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "file:plugins/helloworld_plug",
+  "_shasum": "c29883a6111d5b00e66fd9c0b169d353fe6b4601",
+  "_shrinkwrap": null,
+  "_spec": "/Users/lyy/Desktop/Cordova项目/hello/plugins/helloworld_plug",
+  "_where": "/Users/lyy/Desktop/Cordova项目/hello",
+  "author": "",
+  "cordova": {
+    "id": "Hello",
+    "platforms": [
+      "ios"
+    ]
+  },
+  "dependencies": {},
+  "devDependencies": {},
+  "keywords": [
+    "ecosystem:cordova",
+    "cordova-ios"
+  ],
+  "license": "ISC",
+  "name": "Hello",
+  "optionalDependencies": {},
+  "readme": "ERROR: No README data found!",
+  "version": "1.0.0"
+}

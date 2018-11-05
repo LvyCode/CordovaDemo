@@ -1,0 +1,18 @@
+{
+  "cordova-plugin-whitelist": {
+    "source": {
+      "type": "registry",
+      "id": "cordova-plugin-whitelist@1"
+    },
+    "is_top_level": true,
+    "variables": {}
+  },
+  "Hello": {
+    "source": {
+      "type": "local",
+      "path": "/Users/lyy/Desktop/Cordova项目/hello/node_modules/Hello"
+    },
+    "is_top_level": true,
+    "variables": {}
+  }
+}

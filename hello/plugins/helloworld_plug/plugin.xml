@@ -1,0 +1,2 @@
+<?xml version='1.0' encoding='utf-8'?>
+<plugin id="Hello" version="1.0.0" xmlns="http://apache.org/cordova/ns/plugins/1.0" xmlns:android="http://schemas.android.com/apk/res/android"><name>helloworld_plug</name><js-module name="helloworld_plug" src="www/helloworld_plug.js"><clobbers target="cordova.plugins.helloworld_plug" /></js-module><platform name="ios"><config-file parent="/*" target="config.xml"><feature name="helloworld_plug"><param name="ios-package" value="helloworld_plug" /></feature></config-file><source-file src="src/ios/helloworld_plug.m" /></platform></plugin>
