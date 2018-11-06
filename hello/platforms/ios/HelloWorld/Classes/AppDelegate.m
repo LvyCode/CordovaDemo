@@ -27,13 +27,36 @@
 
 #import "AppDelegate.h"
 #import "MainViewController.h"
+#import "GuidePageVC.h"
 
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication*)application didFinishLaunchingWithOptions:(NSDictionary*)launchOptions
 {
-    self.viewController = [[MainViewController alloc] init];
-    return [super application:application didFinishLaunchingWithOptions:launchOptions];
+    
+//    if ([[NSUserDefaults standardUserDefaults] objectForKey:@"isShowG"] == nil
+//        || [[[NSUserDefaults standardUserDefaults] objectForKey:@"isShowG"] boolValue] == YES) {
+    
+        GuidePageVC *vc = [[GuidePageVC alloc] init];
+        vc.enterMainPage = ^{
+            
+            self.window.rootViewController = [[MainViewController alloc] init];
+            [super application:application didFinishLaunchingWithOptions:launchOptions];
+            [[NSUserDefaults standardUserDefaults] setObject:@(NO) forKey:@"isShowG"];
+        };
+        
+        CGRect screenBounds = [[UIScreen mainScreen] bounds];
+        self.window = [[UIWindow alloc] initWithFrame:screenBounds];
+        self.window.autoresizesSubviews = YES;
+        self.window.rootViewController = vc;
+        [self.window makeKeyAndVisible];
+        
+        return YES;
+//    }
+//    else {
+//        self.viewController = [[MainViewController alloc] init];
+//        return [super application:application didFinishLaunchingWithOptions:launchOptions];
+//    }
 }
 
 @end
